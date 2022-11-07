@@ -10,6 +10,5 @@ async def banned_word(message: types.Message):
         if word in text[0]:
             await message.delete()
 
-
 def register_handlers_other(dp: Dispatcher):
     dp.register_message_handler(banned_word)
