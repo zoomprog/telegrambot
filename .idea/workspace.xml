@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a7379e-2a18-4250-84d9-41cba7d6497e" name="Changes" comment="Сделал организацию хендлеров по файлам(организация пакетов)">
+    <list default="true" id="10a7379e-2a18-4250-84d9-41cba7d6497e" name="Changes" comment="Исправил ошибку с удалением запретных симвлов">
+      <change afterPath="$PROJECT_DIR$/keybords/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keybords/client_kb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/other.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/other.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667817922273</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Исправил ошибку с удалением запретных симвлов">
+      <created>1667827988569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667827988569</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделал организацию хендлеров по файлам(организация пакетов)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал организацию хендлеров по файлам(организация пакетов)" />
+    <MESSAGE value="Исправил ошибку с удалением запретных симвлов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибку с удалением запретных симвлов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
