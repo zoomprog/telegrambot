@@ -20,7 +20,7 @@ async def cm_start(message: types.Message):
     await message.reply('Имя:')
 
 
-# первый ответ и словарь
+# Имя
 
 @dp.message_handler(state=FSMAdmin.name)
 async def load_name(message: types.Message, state=FSMContext):
@@ -29,17 +29,15 @@ async def load_name(message: types.Message, state=FSMContext):
     await FSMAdmin.next()
     await message.reply('Фамилия: ')
 
-
+# Фамилия
 dp.message_handler(state=FSMAdmin.surname)
-
-
 async def load_surname(message: types.Message, state=FSMContext):
     async with state.proxy() as data:
         data['surname'] = message.text
     await FSMAdmin.next()
     await message.reply('Отчество: ')
 
-
+# Отчество
 dp.message_handler(state=FSMAdmin.patronymic)
 async def load_patronymic(message: types.Message, state=FSMContext):
     async with state.proxy() as data:
@@ -47,7 +45,7 @@ async def load_patronymic(message: types.Message, state=FSMContext):
     await FSMAdmin.next()
     await message.reply('Снилс: ')
 
-
+#Снилс
 dp.message_handler(state=FSMAdmin.snils)
 async def load_snils(message: types.Message, state=FSMContext):
     async with state.proxy() as data:
@@ -55,7 +53,7 @@ async def load_snils(message: types.Message, state=FSMContext):
     await FSMAdmin.next()
     await message.reply('Город проживания: ')
 
-
+# Место проживания
 dp.message_handler(state=FSMAdmin.city)
 async def load_сшен(message: types.Message, state=FSMContext):
     async with state.proxy() as data:
