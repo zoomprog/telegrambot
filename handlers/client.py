@@ -1,10 +1,11 @@
 from aiogram import types, Dispatcher
 from create_bot import bot, dp
-from keybords import kb_client
+from keybords import kb_client, get_start_ikb, prdusts_cb
+import db
 
 
 async def command_start(message: types.Message):
-    await bot.send_message(message.from_user.id, 'Запись ко врачу', reply_markup=kb_client)
+    await message.answer('Запись ко врачу', reply_markup=get_start_ikb())
 
 
 async def bot_message(message: types.Message):

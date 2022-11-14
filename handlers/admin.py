@@ -15,7 +15,7 @@ class FSMAdmin(StatesGroup):
 
 
 # Начало диалога загрузки нового пункта регестрации
-@dp.message_handler(commands='Регистрация', )
+@dp.message_handler(commands='Регистрация')
 async def cm_start(message: types.Message):
     await FSMAdmin.name.set()
     await message.reply('Имя:')
@@ -81,9 +81,10 @@ async def cancel_handler(message: types.Message, state: FSMContext):
 
 
 def register_handlers_admin(dp: Dispatcher):
+
+    dp.register_message_handler(cm_start, commands=['Регистрация'], state=None)
     dp.register_message_handler(cancel_handler, state='*', commands='отмена')
     dp.register_message_handler(cancel_handler, Text(equals='отмена', ignore_case=True), state='*')
-    dp.register_message_handler(cm_start, commands=['Регистрация'], state=None)
     dp.register_message_handler(load_name, content_types='name', state=FSMAdmin.name)
     dp.register_message_handler(load_name, state=FSMAdmin.name)
     dp.register_message_handler(load_surname, state=FSMAdmin.surname)
